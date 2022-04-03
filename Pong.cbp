@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Pong" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Pong" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++14" />
+					<Add option="-g" />
+					<Add option="-DSFML_STATICS" />
+				</Compiler>
+				<Linker>
+					<Add library="sfml-window-d" />
+					<Add library="sfml-system-d" />
+					<Add library="sfml-graphics-d" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Pong" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="sfml-window" />
+					<Add library="sfml-system" />
+					<Add library="sfml-graphics" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++14" />
+			<Add option="-fexceptions" />
+			<Add directory="../SFML-2.5.1/include" />
+		</Compiler>
+		<Linker>
+			<Add directory="../SFML-2.5.1/lib" />
+		</Linker>
+		<Unit filename="Entity.cpp" />
+		<Unit filename="Entity.h" />
+		<Unit filename="GraphicsManager.cpp" />
+		<Unit filename="GraphicsManager.h" />
+		<Unit filename="Pong.cpp" />
+		<Unit filename="Pong.h" />
+		<Unit filename="User.cpp" />
+		<Unit filename="User.h" />
+		<Unit filename="User01.cpp" />
+		<Unit filename="User01.h" />
+		<Unit filename="User02.cpp" />
+		<Unit filename="User02.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="openal32.dll" />
+		<Unit filename="sfml-audio-2.dll" />
+		<Unit filename="sfml-audio-d-2.dll" />
+		<Unit filename="sfml-graphics-2.dll" />
+		<Unit filename="sfml-graphics-d-2.dll" />
+		<Unit filename="sfml-network-2.dll" />
+		<Unit filename="sfml-network-d-2.dll" />
+		<Unit filename="sfml-system-2.dll" />
+		<Unit filename="sfml-system-d-2.dll" />
+		<Unit filename="sfml-window-2.dll" />
+		<Unit filename="sfml-window-d-2.dll" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
