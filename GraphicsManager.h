@@ -9,9 +9,9 @@
 #define ON sf::Color::Red
 #define OFF sf::Color(210,210,210,255) // RGB e alfa, intervalo de [0,255]
 #define LED_RADIUS 15.0f
-#define DISTANCE_BETWEEN_THE_LEDS 5.0f
-#define BORDER_X 30.0f
-#define BORDER_Y 30.0f
+#define DISTANCE_BETWEEN_THE_LEDS 10.0f
+#define BORDER_X 40.0f
+#define BORDER_Y 40.0f
 
 #define SIZE_WINDOW_X (2*COLUMNS*LED_RADIUS + (COLUMNS-1)*DISTANCE_BETWEEN_THE_LEDS + 2 * BORDER_X)
 #define SIZE_WINDOW_Y (2*ROW*LED_RADIUS + (ROW-1)*DISTANCE_BETWEEN_THE_LEDS + 2 * BORDER_Y)

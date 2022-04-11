@@ -1,37 +1,83 @@
 #include "Pong.h"
 
 Pong::Pong():
-    Entity()/*,
-    time_loop(0.000f)*/
+    Entity(),
+    elapsed_time_user(0.00f),
+    elapsed_time_game(0.00f),
+    a(0),
+    b(1),
+    one(),
+    two(),
+    ball(),
+    s1(1,0),
+    s2(0,0),
+    time(1.0f),
+    control1(0),
+    control2(0),
+    dx(-1),
+    dy(1)
     {
 
     }
 Pong::~Pong() {}
 
-void Pong::setup() {
-
+void Pong::game() {
+    elapsed_time_game += manager->getDelta();
+    elapsed_time_user += manager->getDelta();
+    unsigned char memory1 = one.getInformation();
+    unsigned char memory2 = two.getInformation();
+    control1 = memory1 ? memory1 : control1;
+    control2 = memory2 ? memory2 : control2;
+    if(elapsed_time_user > USER_REATION_TIME) {
+        a.move(control1);
+        b.move(control2);
+        elapsed_time_user -= USER_REATION_TIME;
+        control1 = 0;
+        control2 = 0;
+    }
+    if(elapsed_time_game > (INITIAL_BALL_MOVEMENT_TIME * time)) {
+        /*Vereficar colisao e redimensionar */
+        int bposx = ball.getPositionX();
+        int bposy = ball.getPositionY();
+        int p1posy = a.getPositionY();
+        int p2posy = b.getPositionY();
+        int size = a.getSize();
+        if(!(bposx + dx)) {
+            dx *= (-1);
+            if( (bposy >= p1posy) && (bposy < (p1posy + size)) ) {
+                time *= TIME;
+            } else {
+                ball.setPosition(COLUMNS/2, ROW/2);
+                time = 1.0f;
+                s2.Point();
+            }
+        } else if ((bposx + dx) == (COLUMNS - 1)) {
+            dx *= (-1);
+            if( (bposy >= p2posy) && (bposy <= (p2posy + size)) ) {
+                time *= TIME;
+            } else {
+                ball.setPosition(COLUMNS/2, ROW/2);
+                time = 1.0f;
+                s1.Point();
+            }
+        }
+        if((bposy + dy) < 0 || (bposy + dy) == ROW) { // colisao vertical
+            dy *= (-1);
+        }
+        ball.move(dx,dy);
+        elapsed_time_game = 0.000f;
+    }
 }
+void Pong::setup() {}
 
 void Pong::loop() {
-    float elapsed_time = 0.0f;
     while(manager->isOpen()) { // Enquanto a janela estiver aberta o loop continua
         //manager->data(); // dados
         //printf("%.4f\n", manager->getDelta()); // printa no cmd o tempo de cada loop
         manager->setDeltaTime(); // ajusta o tempo de cada loop
-        elapsed_time += manager->getDelta(); // somatorio(elapsed_time) de tempo que é increcentada o tempo de cada loop.
         manager->checkEvent(); // verefica se a janela foi fechada ou redimensionada e feha ou redimensiona.
 
-        /*
-         * faz a led na posicao (0,0) piscar.
-         */
-        if(elapsed_time >= 0.5) { // se o tempo decorrido for superior a 0.5s
-            elapsed_time -= 0.5; //"zera o tempo"
-            if(manager->isOn(0,0)) { //vereficar se a led está ligada
-                manager->turnOff(0,0); // desliga a led(0,0)
-            } else { //se não estiver ligada
-                manager->turnOn(0,0); // ligo a led(0,0)
-            }
-        }
+        game();
 
         manager->Clear(); // limpa a tela
         manager->Draw(); // desenha na tela("atualiza")

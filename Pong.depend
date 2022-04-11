@@ -419,11 +419,11 @@
 1648943215 source:c:\users\azelo\onedrive\documentos\pong\main.cpp
 	"Pong.h"
 
-1648993242 c:\users\azelo\onedrive\documentos\pong\graphicsmanager.h
+1649213352 c:\users\azelo\onedrive\documentos\pong\graphicsmanager.h
 	<SFML/Graphics.hpp>
 	<iostream>
 
-1648992808 source:c:\users\azelo\onedrive\documentos\pong\pong.cpp
+1649650633 source:c:\users\azelo\onedrive\documentos\pong\pong.cpp
 	"Pong.h"
 
 1648933568 source:c:\users\azelo\onedrive\documentos\pong\entity.cpp
@@ -432,28 +432,61 @@
 1648932516 c:\users\azelo\onedrive\documentos\pong\entity.h
 	"GraphicsManager.h"
 
-1648992473 c:\users\azelo\onedrive\documentos\pong\pong.h
-	"User01.h"
-	"User02.h"
+1649649972 c:\users\azelo\onedrive\documentos\pong\pong.h
+	"User1.h"
+	"User2.h"
+	"Palette.h"
+	"Ball.h"
+	"Score.h"
 
-1648993103 source:c:\users\azelo\onedrive\documentos\pong\graphicsmanager.cpp
+1649569640 source:c:\users\azelo\onedrive\documentos\pong\graphicsmanager.cpp
 	"GraphicsManager.h"
 
-1648963084 source:c:\users\azelo\onedrive\documentos\pong\user.cpp
+1649572417 source:c:\users\azelo\onedrive\documentos\pong\user.cpp
 	"User.h"
 
-1648963163 c:\users\azelo\onedrive\documentos\pong\user.h
+1649572212 c:\users\azelo\onedrive\documentos\pong\user.h
 	"Entity.h"
 
-1648989464 c:\users\azelo\onedrive\documentos\pong\user01.h
+1649569008 c:\users\azelo\onedrive\documentos\pong\user01.h
 	"User.h"
 
-1648989458 c:\users\azelo\onedrive\documentos\pong\user02.h
+1649569061 c:\users\azelo\onedrive\documentos\pong\user02.h
 	"User.h"
 
-1648963288 source:c:\users\azelo\onedrive\documentos\pong\user01.cpp
+1649560422 source:c:\users\azelo\onedrive\documentos\pong\user01.cpp
 	"User01.h"
 
-1648963404 source:c:\users\azelo\onedrive\documentos\pong\user02.cpp
+1649560682 source:c:\users\azelo\onedrive\documentos\pong\user02.cpp
 	"User02.h"
+
+1649630782 c:\users\azelo\onedrive\documentos\pong\palette.h
+	"Entity.h"
+
+1649630797 source:c:\users\azelo\onedrive\documentos\pong\palette.cpp
+	"Palette.h"
+
+1649572228 c:\users\azelo\onedrive\documentos\pong\user1.h
+	"User.h"
+
+1649572300 c:\users\azelo\onedrive\documentos\pong\user2.h
+	"User.h"
+
+1649572375 source:c:\users\azelo\onedrive\documentos\pong\user1.cpp
+	"User1.h"
+
+1649572382 source:c:\users\azelo\onedrive\documentos\pong\user2.cpp
+	"User2.h"
+
+1649650354 c:\users\azelo\onedrive\documentos\pong\ball.h
+	"Entity.h"
+
+1649650431 source:c:\users\azelo\onedrive\documentos\pong\ball.cpp
+	"Ball.h"
+
+1649650564 source:c:\users\azelo\onedrive\documentos\pong\score.cpp
+	"Score.h"
+
+1649650723 c:\users\azelo\onedrive\documentos\pong\score.h
+	"Entity.h"
 

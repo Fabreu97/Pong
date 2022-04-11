@@ -143,11 +143,15 @@ const unsigned char GraphicsManager::controlUser02() {
 }
 
 void GraphicsManager::turnOn(const unsigned int posx, const unsigned int posy) {
-    matrix[posy][posx].On();
+    if( (posy >= 0) && (posy < ROW) ) {
+        matrix[posy][posx].On();
+    }
 }
 
 void GraphicsManager::turnOff(const unsigned int posx, const unsigned int posy) {
-    matrix[posy][posx].Off();
+    if( (posy >= 0) && (posy < ROW) ) {
+        matrix[posy][posx].Off();
+    }
 }
 
 const bool GraphicsManager::isOn(const unsigned int row, const unsigned int columns) const {

@@ -47,18 +47,24 @@
 		<Linker>
 			<Add directory="../SFML-2.5.1/lib" />
 		</Linker>
+		<Unit filename="Ball.cpp" />
+		<Unit filename="Ball.h" />
 		<Unit filename="Entity.cpp" />
 		<Unit filename="Entity.h" />
 		<Unit filename="GraphicsManager.cpp" />
 		<Unit filename="GraphicsManager.h" />
+		<Unit filename="Palette.cpp" />
+		<Unit filename="Palette.h" />
 		<Unit filename="Pong.cpp" />
 		<Unit filename="Pong.h" />
+		<Unit filename="Score.cpp" />
+		<Unit filename="Score.h" />
 		<Unit filename="User.cpp" />
 		<Unit filename="User.h" />
-		<Unit filename="User01.cpp" />
-		<Unit filename="User01.h" />
-		<Unit filename="User02.cpp" />
-		<Unit filename="User02.h" />
+		<Unit filename="User1.cpp" />
+		<Unit filename="User1.h" />
+		<Unit filename="User2.cpp" />
+		<Unit filename="User2.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="openal32.dll" />
 		<Unit filename="sfml-audio-2.dll" />
