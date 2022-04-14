@@ -46,6 +46,10 @@ void Pong::game() {
             dx *= (-1);
             if( (bposy >= p1posy) && (bposy < (p1posy + size)) ) {
                 time *= TIME;
+            } else if ( ((bposy + 1) == p1posy) && dy > 0){
+                dy *= (-1);
+            } else if(bposy == (p1posy + size) && dy < 0) {
+                dy *= (-1);
             } else {
                 ball.setPosition(COLUMNS/2, ROW/2);
                 time = 1.0f;
@@ -53,8 +57,12 @@ void Pong::game() {
             }
         } else if ((bposx + dx) == (COLUMNS - 1)) {
             dx *= (-1);
-            if( (bposy >= p2posy) && (bposy <= (p2posy + size)) ) {
+            if( (bposy >= p2posy) && (bposy < (p2posy + size)) ) {
                 time *= TIME;
+            } else if ( ((bposy + 1) == p2posy) && dy > 0){
+                dy *= (-1);
+            } else if(bposy == (p2posy + size) && dy < 0) {
+                dy *= (-1);
             } else {
                 ball.setPosition(COLUMNS/2, ROW/2);
                 time = 1.0f;

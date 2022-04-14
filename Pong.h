@@ -9,7 +9,7 @@
 #define INCLUDED_PONG_H
 #define INITIAL_BALL_MOVEMENT_TIME 0.09f
 #define USER_REATION_TIME 0.05f
-#define TIME 0.9f // perde 10% de tempo a cada colisao
+#define TIME 0.85f // perde 10% de tempo a cada colisao
 
 class Pong : public Entity {
 private:
